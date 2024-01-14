@@ -1,4 +1,4 @@
-## Olá, eu sou Lucas Barbosa
+## Olá, eu sou o Lucas Barbosa
 
 Olá, eu sou Lucas Barbosa, desenvolvedor Front-End, sou movido pela paixão em transformar linhas de código em experiências visuais extraordinárias.  
 
