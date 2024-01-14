@@ -31,6 +31,4 @@ Atualmente, estou em busca de oportunidades que me permitam elevar meu nível e 
 <img width=55% align="center"  src="https://github-readme-streak-stats.herokuapp.com?user=LucasBarbosaCunha&theme=dark&mode=weekly" />
 </div>
 
-![snake gif](https://github.com/LucasBarbosaCunha/LucasBarbosaCunha/blob/output/github-contribution-grid-snake.svg)
-
 
