@@ -1,6 +1,6 @@
-## Olá, eu sou o Lucas Barbosa
+## Olá, eu sou o Lucas Barbosa &#128400;
 
-Olá, eu sou o Lucas Barbosa, desenvolvedor Front-End, sou movido pela paixão em transformar linhas de código em experiências visuais extraordinárias.  
+Olá, eu sou o Lucas Barbosa, desenvolvedor Front-End, sou movido pela paixão em transformar linhas de código em experiências visuais extraordinárias.  &#128187;
 
 Atualmente, estou em busca de oportunidades que me permitam elevar meu nível e me tornar um profissional excepcional. 
 
@@ -28,7 +28,14 @@ Atualmente, estou em busca de oportunidades que me permitam elevar meu nível e 
 ## Git Analysis
 
 <div  align="center" style="margin-bottom:100px"><br>
-<img width=55% align="center"  src="https://github-readme-streak-stats.herokuapp.com?user=LucasBarbosaCunha&theme=dark&mode=weekly" /><br>
+<img src="https://github-readme-stats.vercel.app/api?username=LucasBarbosaCunha&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=graywhite&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
+  <img src="https://streak-stats.demolab.com?user=LucasBarbosaCunha&locale=en&mode=weekly&theme=graywhite&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=LucasBarbosaCunha&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=graywhite&hide_border=false&order=2" height="150" alt="languages graph"  />
+  <br>
 </div>
+
+##
+<img src="https://raw.githubusercontent.com/LucasBarbosaCunha/LucasBarbosaCunha/output/snake.svg" alt="Snake animation" />
+
 
 
