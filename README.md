@@ -1,6 +1,6 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=764D9A&height=120&section=header"/>
   
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=7BB232&size=30&center=true&vCenter=true&width=1000&lines=Ola,+meu+nome+é+Lucas+Barbosa!+👋​;Desenvolvedor+Front-End!+💻;Explorando+novas+tecnologias+para+interfaces+inovadoras.+💻;)](https://git.io/typing-svg) 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=7BB232&size=30&center=true&vCenter=true&width=1000&lines=Ola,+meu+nome+é+Lucas+Barbosa!+🖐🏽;Desenvolvedor+Front-End!+💻;Explorando+novas+tecnologias+para+interfaces+inovadoras.+💻;)](https://git.io/typing-svg) 
 <br>
 <br>
 ## 📊 Git Analysis:
