@@ -1,35 +1,57 @@
-## Olá, eu sou o Lucas Barbosa &#128400;
-
-Olá, eu sou o Lucas Barbosa, desenvolvedor Front-End, sou movido pela paixão em transformar linhas de código em experiências visuais extraordinárias.  &#128187;
-
-Atualmente, estou em busca de oportunidades que me permitam elevar meu nível e me tornar um profissional excepcional. 
-
-## Tecnologias
-
-<div style="display: inline_block"><br>
-  <img align="center" alt="html5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img align="center" alt="css" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img align="center" alt="js" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
-  <img align="center" alt="figma" src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
-  <img align="center" alt="photoshop" src="https://img.shields.io/badge/Photoshop-31A8FF?style=for-the-badge&logo=Adobe%20Photoshop&logoColor=black" />
-  <img align="center" alt="illustrator" src="https://img.shields.io/badge/Illustrator-FF9A00?style=for-the-badge&logo=adobe%20illustrator&logoColor=white" />
-  <img align="center" alt="github" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
-  <br>
-</div>
-
-## Contatos
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=764D9A&height=120&section=header"/>
   
-<div><br>
-  <a href="https://www.linkedin.com/in/lucas-barbosa21" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-  <a href = "mailto:lucasbarbosa211@hotmail.com"><img src="https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" target="_blank"></a>
-  <a href="https://www.instagram.com/lucas_barbosa.21" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a><br>
-</div>
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=7BB232&size=30&center=true&vCenter=true&width=1000&lines=Ola,+meu+nome+é+Lucas+Barbosa!+👋​;Desenvolvedor+Front-End!+💻;Explorando+novas+tecnologias+para+interfaces+inovadoras.+💻;)](https://git.io/typing-svg) 
+<br>
+<br>
+## 📊 Git Analysis:
 
-## Git Analysis
-
-<div  align="center" style="margin-bottom:100px"><br>
-<img src="https://github-readme-stats.vercel.app/api?username=LucasBarbosaCunha&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=graywhite&locale=en&hide_border=false&order=1" height="150" alt="stats graph"  />
-  <img src="https://streak-stats.demolab.com?user=LucasBarbosaCunha&locale=en&mode=weekly&theme=graywhite&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=LucasBarbosaCunha&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=graywhite&hide_border=false&order=2" height="150" alt="languages graph"  />
+<div align="center"> <br>
+  <img src="https://github-readme-stats.vercel.app/api?username=LucasBarbosaCunha&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=ocean_dark&locale=en&hide_border=false" height="150" alt="stats graph"  />
+  <img src="https://streak-stats.demolab.com?user=LucasBarbosaCunha&locale=en&mode=daily&theme=ocean_dark&hide_border=false&border_radius=5" height="150" alt="streak graph"  />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=LucasBarbosaCunha&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=ocean_dark&hide_border=false" height="150" alt="languages graph"  />
   <br>
 </div>
+
+## 💻 Tecnologias:
+
+<div align="left">
+  <br>
+  <br>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="40" alt="figma logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" height="40" alt="photoshop logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" height="40" alt="illustrator logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" alt="github logo"  />
+  <br>
+  <br>
+</div>
+
+## ✉️ Contatos:
+  
+<div align="left"> <br> <br>
+  <a href="https://www.linkedin.com/in/lucas-barbosa21/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
+  </a>
+  <a href="https://www.instagram.com/luczx.jpg/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
+  </a>
+  <a href="https://www.behance.net/lucasbarbosa208" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Behance&logo=behance&label=&color=1769ff&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="behance logo"  />
+  </a> 
+  <br>
+  <br>
+</div>
+
+##
+
+<br>
+<br>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=764D9A&height=120&section=footer"/>
