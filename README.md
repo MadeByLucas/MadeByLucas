@@ -10,7 +10,7 @@ Sou fundador da **CodenX**, uma agência digital focada em desenvolvimento web, 
 
 Gosto de construir coisas do início ao fim: da arquitetura técnica ao produto que o cliente final usa. Também sou apaixonado por game design e worldbuilding, e mantenho um projeto pessoal de jogo nas horas vagas.
 
-- 🏢 Fundador da [CodenX](#) — desenvolvimento web, e-commerce & marketing digital
+- 🏢 Fundador da [CodenX](https://codenx.com.br) — desenvolvimento web, e-commerce & marketing digital
 - 💻 Construindo interfaces com atenção a performance, animação e detalhes
 - 🎮 Worldbuilding e game design como projeto paralelo
 - 📍 Brasil
@@ -19,9 +19,9 @@ Gosto de construir coisas do início ao fim: da arquitetura técnica ao produto 
 
 ## 📊 Git Analysis:
 <div align="center"> <br>
-  <img src="https://github-readme-stats.vercel.app/api?username=MadeByLucas&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=ocean_dark&locale=en&hide_border=false" height="150" alt="stats graph"  />
-  <img src="https://streak-stats.demolab.com?user=MadeByLucas&locale=en&mode=daily&theme=ocean_dark&hide_border=false&border_radius=5" height="150" alt="streak graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=MadeByLucas&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=ocean_dark&hide_border=false" height="150" alt="languages graph"  />
+  <img src="https://github-stats-extended.vercel.app/api?username=MadeByLucas&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=ocean_dark&locale=en&hide_border=false" height="150" alt="stats graph"  />
+  <img src="https://github-readme-streak-stats-eight.vercel.app?user=MadeByLucas&locale=en&mode=daily&theme=ocean_dark&hide_border=false&border_radius=5" height="150" alt="streak graph"  />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs?username=MadeByLucas&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=ocean_dark&hide_border=false" height="150" alt="languages graph"  />
   <br>
 </div>
 
@@ -53,13 +53,13 @@ Gosto de construir coisas do início ao fim: da arquitetura técnica ao produto 
 
 <div align="left"> <br>
   <a href="https://www.linkedin.com/in/lucasbarbosa21/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="35" alt="linkedin logo"  />
   </a>
   <a href="https://www.instagram.com/luczx.jpg/" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" height="35" alt="instagram logo"  />
   </a>
   <a href="https://www.behance.net/lucasbarbosa208" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Behance&logo=behance&label=&color=1769ff&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="behance logo"  />
+    <img src="https://img.shields.io/badge/Behance-1769FF?style=for-the-badge&logo=behance&logoColor=white" height="35" alt="behance logo"  />
   </a>
   <br>
   <br>
