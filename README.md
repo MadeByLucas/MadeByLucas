@@ -1,10 +1,23 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=764D9A&height=120&section=header"/>
-  
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=7BB232&size=30&center=true&vCenter=true&width=1000&lines=Ola,+meu+nome+é+Lucas+Barbosa!+🖐🏽;Desenvolvedor+Front-End!+💻;Explorando+novas+tecnologias+para+interfaces+inovadoras.+💻;)](https://git.io/typing-svg) 
-<br>
-<br>
-## 📊 Git Analysis:
 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=7BB232&size=30&center=true&vCenter=true&width=1000&lines=Ola,+meu+nome+é+Lucas+Barbosa!+🖐🏽;Fundador+%40+CodenX+%7C+Dev+Front-End!+💻;Construindo+produtos+digitais+do+zero.+🚀;Web%2C+e-commerce+e+UI%2FUX+com+propósito.+✨)](https://git.io/typing-svg)
+
+<br>
+
+## 👋 Sobre mim
+
+Sou fundador da **CodenX**, uma agência digital focada em desenvolvimento web, e-commerce, marketing digital e UI/UX. Antes de liderar equipe, comecei como desenvolvedor front-end — e ainda coloco a mão no código todos os dias.
+
+Gosto de construir coisas do início ao fim: da arquitetura técnica ao produto que o cliente final usa. Também sou apaixonado por game design e worldbuilding, e mantenho um projeto pessoal de jogo nas horas vagas.
+
+- 🏢 Fundador da [CodenX](#) — desenvolvimento web, e-commerce & marketing digital
+- 💻 Construindo interfaces com atenção a performance, animação e detalhes
+- 🎮 Worldbuilding e game design como projeto paralelo
+- 📍 Brasil
+
+<br>
+
+## 📊 Git Analysis:
 <div align="center"> <br>
   <img src="https://github-readme-stats.vercel.app/api?username=MadeByLucas&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=ocean_dark&locale=en&hide_border=false" height="150" alt="stats graph"  />
   <img src="https://streak-stats.demolab.com?user=MadeByLucas&locale=en&mode=daily&theme=ocean_dark&hide_border=false&border_radius=5" height="150" alt="streak graph"  />
@@ -13,15 +26,17 @@
 </div>
 
 ## 💻 Tecnologias:
-
 <div align="left">
-  <br>
   <br>
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="react logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" alt="nodejs logo"  />
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="40" alt="figma logo"  />
   <img width="12" />
@@ -35,8 +50,8 @@
 </div>
 
 ## ✉️ Contatos:
-  
-<div align="left"> <br> <br>
+
+<div align="left"> <br>
   <a href="https://www.linkedin.com/in/lucasbarbosa21/" target="_blank">
     <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="linkedin logo"  />
   </a>
@@ -45,13 +60,10 @@
   </a>
   <a href="https://www.behance.net/lucasbarbosa208" target="_blank">
     <img src="https://img.shields.io/static/v1?message=Behance&logo=behance&label=&color=1769ff&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="behance logo"  />
-  </a> 
+  </a>
   <br>
   <br>
 </div>
 
-##
-
-<br>
 <br>
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=764D9A&height=120&section=footer"/>
