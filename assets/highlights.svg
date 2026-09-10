@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="180" viewBox="0 0 860 180" role="img" aria-label="Destaques do perfil">
+  <title>Destaques do perfil</title>
+  <defs>
+    <linearGradient id="dhl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e5cb43" stop-opacity="0.10"/>
+      <stop offset="65%" stop-color="#e5cb43" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#e5cb43" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="phl" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e5cb43" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#e5cb43" stop-opacity="0.05"/>
+    </linearGradient>
+    <clipPath id="chl"><rect width="860" height="180" rx="14"/></clipPath>
+    
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
+    .h { fill: #e5cb43; font-size: 13px; font-weight: 700; letter-spacing: 1.6px; }
+    .k { fill: #a0a0a0; font-size: 13px; }
+    .v { fill: #f0f0f0; font-size: 15px; font-weight: 700; }
+    .s { fill: #555555; font-size: 11px; }
+    
+  </style>
+  <g clip-path="url(#chl)">
+    <rect width="860" height="180" fill="#080808"/>
+    <rect width="860" height="180" fill="url(#phl)"/>
+    <g stroke="#1f1c14" stroke-width="1" fill="none">
+      <line x1="38" y1="0" x2="38" y2="180"/>
+      <line x1="76" y1="0" x2="76" y2="180"/>
+      <line x1="114" y1="0" x2="114" y2="180"/>
+      <line x1="152" y1="0" x2="152" y2="180"/>
+      <line x1="190" y1="0" x2="190" y2="180"/>
+      <line x1="228" y1="0" x2="228" y2="180"/>
+      <line x1="266" y1="0" x2="266" y2="180"/>
+      <line x1="304" y1="0" x2="304" y2="180"/>
+      <line x1="342" y1="0" x2="342" y2="180"/>
+      <line x1="380" y1="0" x2="380" y2="180"/>
+      <line x1="418" y1="0" x2="418" y2="180"/>
+      <line x1="456" y1="0" x2="456" y2="180"/>
+      <line x1="494" y1="0" x2="494" y2="180"/>
+      <line x1="532" y1="0" x2="532" y2="180"/>
+      <line x1="570" y1="0" x2="570" y2="180"/>
+      <line x1="608" y1="0" x2="608" y2="180"/>
+      <line x1="646" y1="0" x2="646" y2="180"/>
+      <line x1="684" y1="0" x2="684" y2="180"/>
+      <line x1="722" y1="0" x2="722" y2="180"/>
+      <line x1="760" y1="0" x2="760" y2="180"/>
+      <line x1="798" y1="0" x2="798" y2="180"/>
+      <line x1="836" y1="0" x2="836" y2="180"/>
+      <line x1="0" y1="38" x2="860" y2="38"/>
+      <line x1="0" y1="76" x2="860" y2="76"/>
+      <line x1="0" y1="114" x2="860" y2="114"/>
+      <line x1="0" y1="152" x2="860" y2="152"/>
+    </g>
+    <g fill="#e5cb43" opacity="0.055" transform="translate(681.4,-13.5) scale(0.4662)">
+        <path d="M17.248,0l92.362,0c19.99,0 49.341,15.304 65.557,34.183l321.958,374.835c16.216,18.879 13.156,34.183 -6.835,34.183l-92.362,0c-19.99,0 -49.341,-15.304 -65.557,-34.183l-321.959,-374.835c-16.216,-18.879 -13.156,-34.183 6.835,-34.183Z"/>
+        <path d="M490.417,0.162l-92.323,0c-19.982,0 -49.32,15.299 -65.529,34.17l-321.822,374.698c-16.209,18.872 -13.15,34.171 6.832,34.171l92.323,0c19.982,0 49.32,-15.299 65.529,-34.171l321.823,-374.698c16.209,-18.872 13.15,-34.17 -6.832,-34.17Z"/>
+    </g>
+    <line x1="0" y1="178.6" x2="860" y2="123.5" stroke="url(#dhl)" stroke-width="1.4"/>
+    <text class="h" x="30" y="44">DESTAQUES</text>
+    <rect x="28" y="60" width="257" height="96" rx="16" fill="rgba(8,8,12,0.5)" stroke="#1f1c14"/>
+    <rect x="28" y="82" width="4" height="52" rx="2" fill="#e5cb43" opacity="1.00"/>
+    <text x="52" y="98" style="font-size:16px;font-weight:700;fill:#f0f0f0">Open Source</text>
+    <text class="k" x="52" y="122" style="font-size:12.5px">2 repositórios públicos</text>
+    <rect x="301" y="60" width="257" height="96" rx="16" fill="rgba(8,8,12,0.5)" stroke="#1f1c14"/>
+    <rect x="301" y="82" width="4" height="52" rx="2" fill="#e5cb43" opacity="0.78"/>
+    <text x="325" y="98" style="font-size:16px;font-weight:700;fill:#f0f0f0">Impacto</text>
+    <text class="k" x="325" y="122" style="font-size:12.5px">0 estrelas recebidas</text>
+    <rect x="574" y="60" width="257" height="96" rx="16" fill="rgba(8,8,12,0.5)" stroke="#1f1c14"/>
+    <rect x="574" y="82" width="4" height="52" rx="2" fill="#e5cb43" opacity="0.56"/>
+    <text x="598" y="98" style="font-size:16px;font-weight:700;fill:#f0f0f0">Comunidade</text>
+    <text class="k" x="598" y="122" style="font-size:12.5px">5 seguidores</text>
+  </g>
+  <rect x="0.5" y="0.5" width="859" height="179" rx="14" fill="none" stroke="rgba(255,255,255,0.07)"/>
+</svg>

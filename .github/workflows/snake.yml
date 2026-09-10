@@ -1,0 +1,52 @@
+name: Cobrinha de contribuicoes
+
+# Duas etapas: o Platane/snk gera a animacao crua em assets/snake-core.svg e o
+# build_cards.py a envolve no card da CodenX, escrevendo assets/snake.svg -- o
+# arquivo que o README referencia. Os dois ficam versionados, entao a secao
+# Atividade nunca depende de a Action ja ter rodado.
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/snake.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Gerar a cobrinha nas cores da CodenX
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          outputs: |
+            assets/snake-core.svg?color_snake=%23e5cb43&color_dots=%230d0d0c,%233b350f,%23816f1c,%23bda52d,%23e5cb43
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install --quiet pillow
+
+      - name: Montar o card em volta da cobrinha
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/build_cards.py ${{ github.repository_owner }}
+
+      - name: Commitar se algo mudou
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --staged --quiet || git commit -m "chore: atualiza a cobrinha"
+          git push
