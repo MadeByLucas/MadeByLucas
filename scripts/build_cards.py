@@ -82,7 +82,23 @@ def fetch():
         except Exception:
             pass
     contrib = get("https://github-contributions-api.jogruber.de/v4/%s?y=last" % USER)
-    return user, repos, langs, contrib
+    return user, repos, langs, contrib, contagens()
+
+
+def contagens():
+    """PRs, issues e commits: a API de usuario nao traz esses numeros, so a
+    busca. Se a busca falhar (limite de requisicoes), o card simplesmente
+    nao mostra as caixas correspondentes."""
+    base = "https://api.github.com/search/%s?q=author:%s%s&per_page=1"
+    out = {}
+    for chave, rota, extra in (("commits", "commits", ""),
+                               ("prs", "issues", "+type:pr"),
+                               ("issues", "issues", "+type:issue")):
+        try:
+            out[chave] = get(base % (rota, USER, extra))["total_count"]
+        except Exception:
+            pass
+    return out
 
 
 def streaks(days):
@@ -350,43 +366,66 @@ def card_heatmap(contrib):
                 label="Gráfico de contribuições com a cobrinha")
 
 
+def quebra(texto, largura, fs, max_linhas=2):
+    """Quebra por palavra dentro da largura do bloco, sem cortar no meio."""
+    cpl = max(8, int(largura / (fs * 0.53)))
+    linhas, atual = [], ""
+    for palavra in texto.split():
+        teste = (atual + " " + palavra).strip()
+        if len(teste) <= cpl:
+            atual = teste
+        else:
+            linhas.append(atual)
+            atual = palavra
+            if len(linhas) == max_linhas:
+                break
+    if atual and len(linhas) < max_linhas:
+        linhas.append(atual)
+    if len(linhas) == max_linhas and len(" ".join(linhas)) < len(texto):
+        linhas[-1] = linhas[-1][:cpl - 1].rstrip() + "…"
+    return linhas
+
+
 def card_projects(repos):
     rows = repos[:4]
-    CWD, CH = 394.0, 162.0
-    cols = 2 if len(rows) > 1 else 1
-    lines = max(1, (len(rows) + cols - 1) // cols)
+    cols = 1 if len(rows) == 1 else 2
+    CWD = 808.0 if cols == 1 else 394.0
+    lines = (len(rows) + cols - 1) // cols
+
+    # Altura de cada bloco vem do conteudo: descricao de uma ou duas linhas,
+    # com ou sem a etiqueta de linguagem.
+    desenhos = []
+    for r in rows:
+        ls = quebra(r["description"] or "Sem descrição", CWD - 36, 11.5)
+        y = 82.0 + (len(ls) - 1) * 16
+        if r.get("language"):
+            y += 32
+        desenhos.append((r, ls, y + 48))
+    CH = max(d[2] for d in desenhos)
     H = 60 + lines * (CH + 14) + 16
-    body = ['<text class="mono h" x="30" y="40" style="font-size:12px">PROJETOS.LIST</text>',
-            '<text class="mono s" x="190" y="40" style="font-size:11px">./projetos.sh --all</text>',
-            '<text class="mono s" text-anchor="end" x="830" y="40" style="font-size:11px">%d %s</text>'
-            % (len(repos), "repositório" if len(repos) == 1 else "repositórios")]
-    star = max([r["stargazers_count"] for r in rows] + [1])
-    for i, r in enumerate(rows):
+
+    body = ['<text class="h" x="30" y="40">PROJETOS</text>']
+    for i, (r, ls, _) in enumerate(desenhos):
         gx = 26 + (i % cols) * (CWD + 14)
         gy = 60 + (i // cols) * (CH + 14)
-        pct = int(100 * r["stargazers_count"] / star) if star else 0
-        desc = r["description"] or "Sem descrição"
-        d1, d2 = desc[:44], desc[44:88]
-        upd = (r.get("pushed_at") or "")[:10]
         body.append('<g transform="translate(%.0f,%.0f)">' % (gx, gy))
-        body.append('  <rect width="%s" height="%s" rx="13" fill="%s" stroke="%s"/>' % (CWD, CH, PANEL, GRID))
+        body.append('  <rect width="%s" height="%s" rx="13" fill="#0b0b0d" stroke="%s"/>' % (CWD, CH, GRID))
         body.append('  <text class="mono s" x="18" y="26" style="font-size:10.5px">&#8226; %s</text>' % escape(r["name"]))
         body.append('  <text class="mono" x="18" y="58" style="font-size:16.5px;font-weight:700;fill:%s">%s</text>'
                     % (ACCENT, escape(r["name"])))
-        body.append('  <text class="k" x="18" y="82" style="font-size:11.5px">%s</text>' % escape(d1))
-        if d2:
-            body.append('  <text class="k" x="18" y="98" style="font-size:11.5px">%s</text>' % escape(d2))
+        for j, l in enumerate(ls):
+            body.append('  <text class="k" x="18" y="%.0f" style="font-size:11.5px">%s</text>' % (82 + j * 16, escape(l)))
+        y = 82.0 + (len(ls) - 1) * 16
         if r.get("language"):
             lw = 22 + len(r["language"]) * 6.4
-            body.append('  <rect x="18" y="112" width="%.0f" height="18" rx="9" fill="%s" opacity="0.16"/>' % (lw, ACCENT))
-            body.append('  <text class="mono" text-anchor="middle" x="%.0f" y="124.5" style="font-size:9.5px;fill:%s">%s</text>'
-                        % (18 + lw / 2, ACCENT, escape(r["language"])))
-        body.append('  <text class="mono s" x="18" y="150" style="font-size:11px">&#9733; %d  &#183;  atualizado %s</text>'
-                    % (r["stargazers_count"], upd or "n/d"))
-        body.append('  <text class="mono" text-anchor="middle" x="348" y="96" style="font-size:11px;fill:%s">%d%%</text>'
-                    % (ACCENT, pct))
+            body.append('  <rect x="18" y="%.0f" width="%.0f" height="18" rx="9" fill="%s" opacity="0.16"/>' % (y + 14, lw, ACCENT))
+            body.append('  <text class="mono" text-anchor="middle" x="%.0f" y="%.0f" style="font-size:9.5px;fill:%s">%s</text>'
+                        % (18 + lw / 2, y + 26.5, ACCENT, escape(r["language"])))
+            y += 32
+        body.append('  <text class="mono s" x="18" y="%.0f" style="font-size:11px">&#9733; %d  &#183;  atualizado %s</text>'
+                    % (y + 30, r["stargazers_count"], (r.get("pushed_at") or "")[:10] or "n/d"))
         body.append('</g>')
-    return card(W, H, "pj", "\n    ".join(body), label="Projetos em destaque")
+    return card(W, H, "pj", ("%s    " % chr(10)).join(body), label="Projetos em destaque")
 
 
 # Icones de marca, desenhados em viewBox 24x24 e reescalados na hora de usar.
@@ -475,12 +514,10 @@ def card_portrait(user):
                          % (x0 + sc * CWD, TOP + sr * LH, (dc - sc) * CWD, (dr - sr) * LH,
                             dc / COLS * 1.6, escape(ch)))
 
-    body = ['<text class="mono lbl" text-anchor="middle" x="%.0f" y="34">%s@codenx: ~$ ./retrato.sh --morph</text>'
-            % (W / 2, USER.lower()),
+    body = ['<text class="h" x="30" y="36">RETRATO &#8594; X</text>',
             '<line x1="0" y1="52" x2="%.0f" y2="52" stroke="%s"/>' % (W, GRID),
             "\n    ".join(parts)]
     style = """
-    .lbl { fill: %s; font-size: 12.5px; }
     .f { fill: %s; font-family: %s; font-size: %spx;
          animation: fly %ss ease-in-out infinite both; }
     @keyframes fly {
@@ -488,7 +525,7 @@ def card_portrait(user):
       48%%, 74%%  { transform: translate(var(--dx), var(--dy)) }
       96%%, 100%% { transform: translate(0px, 0px) }
     }
-    @media (prefers-reduced-motion: reduce) { .f { animation: none } }""" % (DIM, ACCENT, MONO, FS, T)
+    @media (prefers-reduced-motion: reduce) { .f { animation: none } }""" % (ACCENT, MONO, FS, T)
     return card(W, H, "pr", "\n    ".join(body), extra_style=style,
                 label="Retrato ASCII cujos caracteres migram e formam o X da CodenX")
 
@@ -525,15 +562,14 @@ def card_snake(contrib):
                    lambda m: 'class="%s"' % " ".join("k" + t for t in m.group(1).split()),
                    inner)
 
-    pad, top = 34.0, 74.0
+    pad, top = 34.0, 52.0
     gw = W - 2 * pad
     gh = vh * gw / vw
-    H = top + gh + 26.0
-    body = ['<text class="h" x="30" y="46">ATIVIDADE</text>',
-            '<text class="s" x="%.0f" y="46" text-anchor="end">último ano · Platane/snk</text>' % (W - 30)]
+    H = top + gh + 16.0
+    body = ['<text class="h" x="30" y="46">ATIVIDADE</text>']
     for i, c in enumerate(SNK_DOTS):
         body.append('<rect x="%.0f" y="36" width="11" height="11" rx="2.5" fill="%s" '
-                    'stroke="%s" stroke-opacity="0.5"/>' % (W - 356 + i * 15, c, GRID))
+                    'stroke="%s" stroke-opacity="0.5"/>' % (W - 101 + i * 15, c, GRID))
     body.append('<svg x="%.1f" y="%.1f" width="%.1f" height="%.1f" viewBox="%s" '
                 'preserveAspectRatio="xMidYMid meet">%s</svg>' % (pad, top, gw, gh, vb, inner))
     return card(W, H, "sn", ("%s    " % chr(10)).join(body), extra_style=estilo,
@@ -549,8 +585,7 @@ def card_stack():
     linhas = (len(itens) + COLS - 1) // COLS
     cw, ch = (W - 56 - (COLS - 1) * 14) / COLS, 46.0
     H = 104.0 + linhas * (ch + 14)
-    body = ['<text class="h" x="30" y="46">LINGUAGENS &amp; FERRAMENTAS</text>',
-            '<text class="s" x="%.0f" y="46" text-anchor="end">stack do dia a dia</text>' % (W - 30)]
+    body = ['<text class="h" x="30" y="46">LINGUAGENS &amp; FERRAMENTAS</text>']
     for i, t in enumerate(itens):
         r, c = divmod(i, COLS)
         x, y = 28 + c * (cw + 14), 70 + r * (ch + 14)
@@ -570,11 +605,69 @@ def card_stack():
                 label="Linguagens e ferramentas que uso")
 
 
+def caixas(itens, y0, ch, fs_val, fs_lbl, dy_val, dy_lbl):
+    """Fileira de caixas opacas com numero em cima e rotulo embaixo.
+
+    Opacas de proposito: a diagonal do fundo passa por tras em vez de cortar
+    o texto no meio.
+    """
+    n = len(itens)
+    cw = (W - 56 - (n - 1) * 12) / n
+    out = []
+    for i, (rot, val) in enumerate(itens):
+        x = 28 + i * (cw + 12)
+        out.append('<g class="ent" style="animation-delay:%.2fs">'
+                   '<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" rx="13" fill="#0b0b0d" stroke="%s"/>'
+                   '<text x="%.1f" y="%.1f" style="font-size:%spx;font-weight:800;fill:%s">%s</text>'
+                   '<text class="k" x="%.1f" y="%.1f" style="font-size:%spx">%s</text>'
+                   '</g>' % (i * 0.07, x, y0, cw, ch, GRID,
+                             x + 18, y0 + dy_val, fs_val, ACCENT, escape(val),
+                             x + 18, y0 + dy_lbl, fs_lbl, escape(rot)))
+    return out
+
+
+ENTRA = """
+    .ent { animation: entra .7s cubic-bezier(.22,1,.36,1) both; }
+    @keyframes entra { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: none } }
+    @media (prefers-reduced-motion: reduce) { .ent { animation: none } }"""
+
+
+def card_stats(user, repos, cont):
+    itens = [("Estrelas", num(sum(r["stargazers_count"] for r in repos)))]
+    if "commits" in cont:
+        itens.append(("Commits", num(cont["commits"])))
+    if "prs" in cont:
+        itens.append(("Pull requests", num(cont["prs"])))
+    if "issues" in cont:
+        itens.append(("Issues", num(cont["issues"])))
+    itens.append(("Repositórios", num(user["public_repos"])))
+    itens.append(("Seguidores", num(user["followers"])))
+    ch = 88.0
+    body = ['<text class="h" x="30" y="46">NÚMEROS</text>'] + caixas(itens, 66.0, ch, 30, 11, 52, 74)
+    return card(W, 66.0 + ch + 26.0, "sa", ("%s    " % chr(10)).join(body),
+                extra_style=ENTRA, label="Números do perfil no GitHub")
+
+
+def card_streak(contrib):
+    days = contrib["contributions"]
+    cur, best = streaks(days)
+    total = sum(d["count"] for d in days)
+    itens = [("Contribuições no último ano", num(total)),
+             ("Sequência atual", "%dd" % cur),
+             ("Maior sequência", "%dd" % best)]
+    ch = 98.0
+    body = ['<text class="h" x="30" y="46">CONSISTÊNCIA</text>'] + caixas(itens, 66.0, ch, 36, 12, 58, 82)
+    return card(W, 66.0 + ch + 26.0, "sk", ("%s    " % chr(10)).join(body),
+                extra_style=ENTRA, label="Consistência de contribuições")
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
-    user, repos, langs, contrib = fetch()
+    user, repos, langs, contrib, cont = fetch()
     files = {
         "hero.svg": card_hero(user, repos, contrib),
+        "stats.svg": card_stats(user, repos, cont),
+        "streak.svg": card_streak(contrib),
         "snake.svg": card_snake(contrib),
         "stack.svg": card_stack(),
         "highlights.svg": card_highlights(user, repos),

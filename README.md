@@ -26,8 +26,11 @@ Gosto de construir do início ao fim: da arquitetura técnica ao produto que o c
 ## 📊 Git Analysis
 
 <p align="center">
-  <img height="180" alt="Estatísticas do GitHub" src="https://github-stats-extended.vercel.app/api?username=MadeByLucas&show_icons=true&include_all_commits=true&count_private=true&rank_icon=percentile&bg_color=080808&title_color=e5cb43&icon_color=e5cb43&text_color=a0a0a0&border_color=1c1c1c" />
-  <img height="180" alt="Sequência de contribuições" src="https://github-readme-streak-stats-eight.vercel.app?user=MadeByLucas&background=080808&border=1c1c1c&stroke=1c1c1c&ring=e5cb43&fire=e5cb43&currStreakLabel=e5cb43&sideLabels=a0a0a0&currStreakNum=f0f0f0&sideNums=f0f0f0&dates=555555" />
+  <img src="assets/stats.svg" width="100%" alt="Números do perfil no GitHub" />
+</p>
+
+<p align="center">
+  <img src="assets/streak.svg" width="100%" alt="Consistência de contribuições" />
 </p>
 
 <p align="center">
@@ -50,4 +53,4 @@ Gosto de construir do início ao fim: da arquitetura técnica ao produto que o c
   <img src="assets/portrait.svg" width="100%" alt="Retrato ASCII cujos caracteres migram e formam o X da CodenX" />
 </p>
 
-<sub>Cards gerados por <a href="scripts/build_cards.py">scripts/build_cards.py</a>; cobrinha por <a href="https://github.com/Platane/snk">Platane/snk</a>. Atualizados diariamente por GitHub Actions.</sub>
+<sub>Cobrinha de contribuições por <a href="https://github.com/Platane/snk">Platane/snk</a>.</sub>
