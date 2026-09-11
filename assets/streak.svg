@@ -62,8 +62,8 @@
     </g>
     <line x1="0" y1="188.5" x2="860" y2="130.3" stroke="url(#dsk)" stroke-width="1.4"/>
     <text class="h" x="30" y="46">CONSISTÊNCIA</text>
-    <g class="ent" style="animation-delay:0.00s"><rect x="28.0" y="66.0" width="260.0" height="98.0" rx="13" fill="#0b0b0d" stroke="#1f1c14"/><text x="46.0" y="124.0" style="font-size:36px;font-weight:800;fill:#e5cb43">189</text><text class="k" x="46.0" y="148.0" style="font-size:12px">Contribuições no último ano</text></g>
-    <g class="ent" style="animation-delay:0.07s"><rect x="300.0" y="66.0" width="260.0" height="98.0" rx="13" fill="#0b0b0d" stroke="#1f1c14"/><text x="318.0" y="124.0" style="font-size:36px;font-weight:800;fill:#e5cb43">3d</text><text class="k" x="318.0" y="148.0" style="font-size:12px">Sequência atual</text></g>
+    <g class="ent" style="animation-delay:0.00s"><rect x="28.0" y="66.0" width="260.0" height="98.0" rx="13" fill="#0b0b0d" stroke="#1f1c14"/><text x="46.0" y="124.0" style="font-size:36px;font-weight:800;fill:#e5cb43">195</text><text class="k" x="46.0" y="148.0" style="font-size:12px">Contribuições no último ano</text></g>
+    <g class="ent" style="animation-delay:0.07s"><rect x="300.0" y="66.0" width="260.0" height="98.0" rx="13" fill="#0b0b0d" stroke="#1f1c14"/><text x="318.0" y="124.0" style="font-size:36px;font-weight:800;fill:#e5cb43">4d</text><text class="k" x="318.0" y="148.0" style="font-size:12px">Sequência atual</text></g>
     <g class="ent" style="animation-delay:0.14s"><rect x="572.0" y="66.0" width="260.0" height="98.0" rx="13" fill="#0b0b0d" stroke="#1f1c14"/><text x="590.0" y="124.0" style="font-size:36px;font-weight:800;fill:#e5cb43">17d</text><text class="k" x="590.0" y="148.0" style="font-size:12px">Maior sequência</text></g>
   </g>
   <rect x="0.5" y="0.5" width="859" height="189" rx="14" fill="none" stroke="rgba(255,255,255,0.07)"/>
